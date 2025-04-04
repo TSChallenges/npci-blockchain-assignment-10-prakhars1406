@@ -1,0 +1,44 @@
+version: '2.4'
+
+networks:
+  pharma-net:
+
+services:
+  # Minimal Orderer
+  orderer.pharma.com:
+    image: hyperledger/fabric-orderer:2.4
+    environment:
+      - ORDERER_GENERAL_LISTENPORT=7050
+      - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
+    ports:
+      - 7050:7050
+    networks:
+      - pharma-net
+
+  # Manufacturer (Cipla)
+  peer0.cipla.pharma.com:
+    image: hyperledger/fabric-peer:2.4
+    environment:
+      - CORE_PEER_ID=peer0.cipla.pharma.com
+      - CORE_PEER_ADDRESS=peer0.cipla.pharma.com:7051
+      - CORE_PEER_LOCALMSPID=CiplaMSP
+      - CORE_LEDGER_STATE_STATEDATABASE=goleveldb
+    ports:
+      - 7051:7051
+    depends_on:
+      - orderer.pharma.com
+    networks:
+      - pharma-net
+
+  # Regulator (CDSCO)
+  peer0.cdsco.pharma.com:
+    image: hyperledger/fabric-peer:2.4
+    environment:
+      - CORE_PEER_ID=peer0.cdsco.pharma.com
+      - CORE_PEER_ADDRESS=peer0.cdsco.pharma.com:9051
+      - CORE_PEER_LOCALMSPID=CDSCOMSP
+      - CORE_LEDGER_STATE_STATEDATABASE=goleveldb
+    ports:
+      - 9051:9051
+    networks:
+      - pharma-net

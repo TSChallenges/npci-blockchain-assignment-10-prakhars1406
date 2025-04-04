@@ -1,0 +1,24 @@
+Organizations:
+  - &OrdererOrg
+    Name: OrdererMSP
+    ID: OrdererMSP
+    MSPDir: ../organizations/ordererOrganizations/pharma.com/msp
+
+  - &Cipla
+    Name: CiplaMSP
+    ID: CiplaMSP
+    MSPDir: ../organizations/peerOrganizations/cipla.pharma.com/msp
+
+  - &CDSCO
+    Name: CDSCOMSP
+    ID: CDSCOMSP
+    MSPDir: ../organizations/peerOrganizations/cdsco.pharma.com/msp
+
+Profiles:
+  PharmaChannel:
+    Consortium: SampleConsortium
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+        - *Cipla
+        - *CDSCO

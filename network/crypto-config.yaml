@@ -1,0 +1,20 @@
+OrdererOrgs:
+  - Name: OrdererOrg
+    Domain: pharma.com
+    Specs:
+      - Hostname: orderer
+
+PeerOrgs:
+  - Name: Cipla
+    Domain: cipla.pharma.com
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+
+  - Name: CDSCO
+    Domain: cdsco.pharma.com
+    Template:
+      Count: 1
+    Users:
+      Count: 1
