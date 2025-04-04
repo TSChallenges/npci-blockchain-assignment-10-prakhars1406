@@ -1,4 +1,4 @@
-module drugChaincode
+module drugchaincode
 
 go 1.24
 
