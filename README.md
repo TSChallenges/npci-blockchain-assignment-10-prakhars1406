@@ -109,7 +109,7 @@ Ensure:
 - Traceability is verifiable and tamper-proof.
 
 
-### Deliverables
+## Deliverables
 Upload a **GitHub repo** containing:
 - Customized **Fabric network setup scripts**
 - Chaincode file (`drugChaincode.go`)
@@ -119,7 +119,7 @@ Upload a **GitHub repo** containing:
   - Successful **drug registration, shipment, traceability, and recall**
   - Ledger queries and access control validation
 
-### Additional Notes
+## Additional Notes
 - Use event listeners for shipment, recall, and inspection events.
 - Enable TLS and set up identities properly for MSPs..
 - Use CouchDB as the state database for rich queries (optional but recommended).
