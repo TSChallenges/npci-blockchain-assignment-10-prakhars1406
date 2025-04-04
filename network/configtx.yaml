@@ -9,6 +9,16 @@ Organizations:
     ID: CiplaMSP
     MSPDir: ../organizations/peerOrganizations/cipla.pharma.com/msp
 
+  - &Medlife
+    Name: MedlifeMSP
+    ID: MedlifeMSP
+    MSPDir: ../organizations/peerOrganizations/medlife.pharma.com/msp
+
+  - &Apollo
+    Name: ApolloMSP
+    ID: ApolloMSP
+    MSPDir: ../organizations/peerOrganizations/apollo.pharma.com/msp
+
   - &CDSCO
     Name: CDSCOMSP
     ID: CDSCOMSP
@@ -21,4 +31,6 @@ Profiles:
       <<: *ApplicationDefaults
       Organizations:
         - *Cipla
+        - *Medlife
+        - *Apollo
         - *CDSCO
