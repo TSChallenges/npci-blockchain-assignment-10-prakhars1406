@@ -1,4 +1,4 @@
-# NPCI-blockchain-Assignment-10
+# NPCI-Blockchain-Assignment-10
 ## Pharmaceutical Supply Chain [10 Marks]
 
 ## Overview
