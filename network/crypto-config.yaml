@@ -12,6 +12,20 @@ PeerOrgs:
     Users:
       Count: 1
 
+    - Name: Medlife
+      Domain: medlife.pharma.com
+      Template:
+        Count: 1
+      Users:
+        Count: 1
+
+    - Name: Apollo
+      Domain: apollo.pharma.com
+      Template:
+        Count: 1
+      Users:
+        Count: 1
+
   - Name: CDSCO
     Domain: cdsco.pharma.com
     Template:
